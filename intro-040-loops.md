@@ -17,7 +17,7 @@ DO i = 1 TO 5;
 END;
 ```
 
-`FIXED BINARY` corresponds to the nteger type in other languages.
+`FIXED BINARY` corresponds to the integer type in other languages.
 The range of values specifed by `(15)` is that of a 16-bit integer:
 from -32767 to 32767.  All PL/I values are signed, so the sign bit
 is not included in the declaration.  If we left off the `(15)`,
@@ -28,8 +28,8 @@ The `R` format item is used to refer to a `FORMAT` statement by its
 label.  We're going to refer to the same `FORMAT` statement in the
 following examples as well.
 
-If we want instead to print the numbers 1, 3, and 5, we can add
-`BY 2` either before or after `TO 5`.  This illustrates a general
+If we want instead to print the numbers 1, 3, and 5, we can write
+`i = 1 TO 5 BY 2` or `i = 1 BY 2 TO 5`. This illustrates a general
 principle in PL/I that the parts of a statement can usually be
 written in any order.  For example, `FIXED(15) BINARY`,
 `BINARY(15) FIXED`, and `BINARY FIXED(15)`
